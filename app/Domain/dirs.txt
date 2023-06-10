@@ -1,0 +1,91 @@
+app
+├── Domain
+│   ├── Quiz
+│   │   ├── Models
+│   │   │   └── Quiz.php
+│   │   ├── Repositories
+│   │   │   ├── QuizRepositoryInterface.php
+│   │   │   └── EloquentQuizRepository.php
+│   │   ├── Services
+│   │   │   └── QuizService.php
+│   │   ├── Events
+│   │   │   ├── QuizStarted.php
+│   │   │   ├── QuizSubmitted.php
+│   │   │   └── QuizGraded.php
+│   │   └── UseCases (to be renamed to Actions)
+│   │       ├── CreateQuiz.php
+│   │       ├── StartQuiz.php
+│   │       ├── SubmitQuiz.php
+│   │       └── GradeQuiz.php
+│   ├── StudyPlan
+│   │   ├── Models
+│   │   │   └── StudyPlan.php
+│   │   ├── Repositories
+│   │   │   ├── StudyPlanRepositoryInterface.php
+│   │   │   └── EloquentStudyPlanRepository.php
+│   │   ├── Services
+│   │   │   └── StudyPlanService.php
+│   │   ├── Events
+│   │   │   ├── StudyPlanCreated.php
+│   │   │   ├── StudyPlanUpdated.php
+│   │   │   └── StudyPlanDeleted.php
+│   │   └── UseCases
+│   │       ├── CreateStudyPlan.php
+│   │       ├── UpdateStudyPlan.php
+│   │       └── DeleteStudyPlan.php
+│   ├── User
+│   │   ├── Models
+│   │   │   ├── User.php
+│   │   │   └── UserPreference.php
+│   │   ├── Repositories
+│   │   │   ├── UserRepositoryInterface.php
+│   │   │   └── EloquentUserRepository.php
+│   │   ├── Services
+│   │   │   └── UserService.php
+│   │   ├── Events
+│   │   │   ├── UserRegistered.php
+│   │   │   ├── UserLoggedIn.php
+│   │   │   └── UserDeleted.php
+│   │   └── UseCases
+│   │       ├── RegisterUser.php
+│   │       ├── LoginUser.php
+│   │       └── DeleteUser.php
+│   ├── Notification
+│   │   ├── Models
+│   │   │   └── Notification.php
+│   │   ├── Repositories
+│   │   │   ├── NotificationRepositoryInterface.php
+│   │   │   └── EloquentNotificationRepository.php
+│   │   ├── Services
+│   │   │   └── NotificationService.php
+│   │   ├── Events
+│   │   │   ├── NotificationSent.php
+│   │   │   └── NotificationRead.php
+│   │   └── UseCases
+│   │       ├── SendNotification.php
+│   │       └── MarkNotificationAsRead.php
+│   ├── Customization
+│   │   ├── Models
+│   │   │   ├── Theme.php
+│   │   │   └── UIPreference.php
+│   │   ├── Repositories
+│   │   │   ├── UIPreferenceRepositoryInterface.php
+│   │   │   └── EloquentUIPreferenceRepository.php
+│   │   ├── Services
+│   │   │   └── CustomizationService.php
+│   │   ├── Events
+│   │   │   ├── ThemeChanged.php
+│   │   │   └── PreferencesUpdated.php
+│   │   └── UseCases
+│   │       ├── ChangeTheme.php
+│   │       └── UpdatePreferences.php
+│   └── Common
+│       ├── Exceptions
+│       │   ├── QuizNotFoundException.php
+│       │   ├── StudyPlanNotFoundException.php
+│       │   ├── UserNotFoundException.php
+│       │   ├── NotificationNotFoundException.php
+│       │   └── CustomizationNotFoundException.php
+│       └── Helpers
+│           └── ...
+└── ...
